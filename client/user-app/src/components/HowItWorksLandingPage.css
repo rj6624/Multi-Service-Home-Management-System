@@ -1,0 +1,194 @@
+.how-it-works {
+    width: 1322px;
+    margin: 50px auto 0 auto;
+    padding: 20px 0;
+}
+
+.how-it-works-header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.how-it-works-header h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #4E0000;
+    margin: 0;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+
+.step-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.step-card {
+    width: 100%;
+    background: linear-gradient(0deg, #4E0000 0%, #560c0c 34%, #7d2121 68%, #b25c5c 100%);
+    border-radius: 20px;
+    padding: 40px 20px 30px 20px;
+    position: relative;
+    text-align: center;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-badge {
+    position: absolute;
+    top: -15px;
+    background: linear-gradient(135deg, #F6EFEA 0%, #b69257 100%);
+    color: #000;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    /* background-color: #E5A1A1; */
+    background: linear-gradient(135deg, #F6EFEA 0%, #b69257 100%);
+
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 20px auto;
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 28px;
+    color: #4E0000;
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+}
+
+.step-description {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.step-connector {
+    width: 40px;
+    height: 2px;
+    background-color: #D1B8B8;
+    margin: 0 -20px;
+    align-self: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .how-it-works {
+        width: 100%;
+        max-width: 1322px;
+        padding: 40px 40px 0 40px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .how-it-works {
+        padding: 30px 30px 0 30px;
+    }
+
+    .how-it-works-header h2 {
+        font-size: 28px;
+    }
+
+    .step-card {
+        padding: 35px 15px 25px 15px;
+        height: 240px;
+    }
+
+    .step-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .step-title {
+        font-size: 16px;
+    }
+
+    .step-description {
+        font-size: 13px;
+    }
+
+    .step-connector {
+        width: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works {
+        padding: 20px;
+    }
+
+    .steps-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .step-wrapper {
+        width: 100%;
+    }
+
+    .step-connector {
+        display: none;
+    }
+
+    .step-card {
+        min-height: auto;
+    }
+
+    .how-it-works-header h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .how-it-works {
+        padding: 20px;
+    }
+
+    .step-badge {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
+    .step-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .step-title {
+        font-size: 15px;
+    }
+
+    .step-description {
+        font-size: 12px;
+    }
+
+    .how-it-works-header h2 {
+        font-size: 20px;
+    }
+}
