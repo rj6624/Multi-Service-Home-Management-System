@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import IntroLandingPage from '../components/IntroLandingPage';
 import ServiceCatalogLandingPage from '../components/ServiceCatalogLandingPage';
 import HowItWorksLandingPage from '../components/HowItWorksLandingPage';
+import CustomerReviewLandingPage from '../components/CustomerReviewLandingPage';
 
 function LandingPage() {
   return (
@@ -14,6 +15,7 @@ function LandingPage() {
       <IntroLandingPage />
       <ServiceCatalogLandingPage />
       <HowItWorksLandingPage />
+      <CustomerReviewLandingPage />
     </div>
   );
 }
