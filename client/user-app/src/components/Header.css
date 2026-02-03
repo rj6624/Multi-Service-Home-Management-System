@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.App-header{
+    height: 61px;
+    width: 100%;
+    background-color: #4E0000;
+    display: flex;
+    align-items: center;
+    padding: 0 59px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    color: white;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.sign-in-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sign-up-btn {
+    background-color: white;
+    color: #4E0000;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.sign-in-btn:hover {
+    opacity: 0.8;
+}
+
+.sign-up-btn:hover {
+    opacity: 0.9;
+}
