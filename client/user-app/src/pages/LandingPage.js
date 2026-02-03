@@ -1,9 +1,9 @@
 import React from 'react';
-import './Dashboard.css';
+import './LandingPage.css';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 
-function Dashboard() {
+function LandingPage() {
   return (
     <div className="App">
       <Header />
@@ -12,4 +12,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default LandingPage;
