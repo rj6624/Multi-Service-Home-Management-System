@@ -3,6 +3,7 @@ import './LandingPage.css';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import IntroLandingPage from '../components/IntroLandingPage';
+import ServiceCatalogLandingPage from '../components/ServiceCatalogLandingPage';
 
 function LandingPage() {
   return (
@@ -10,7 +11,7 @@ function LandingPage() {
       <Header />
       <Navigation />
       <IntroLandingPage />
-
+      <ServiceCatalogLandingPage />
     </div>
   );
 }
