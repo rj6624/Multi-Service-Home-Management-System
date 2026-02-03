@@ -7,6 +7,7 @@ import ServiceCatalogLandingPage from '../components/ServiceCatalogLandingPage';
 import HowItWorksLandingPage from '../components/HowItWorksLandingPage';
 import CustomerReviewLandingPage from '../components/CustomerReviewLandingPage';
 import NetworkLandingPage from '../components/NetworkLandingPage';
+import Footer from '../components/Footer';
 
 function LandingPage() {
   return (
@@ -18,6 +19,7 @@ function LandingPage() {
       <HowItWorksLandingPage />
       <CustomerReviewLandingPage />
       <NetworkLandingPage />
+      <Footer />
     </div>
   );
 }
