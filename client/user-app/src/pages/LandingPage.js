@@ -6,6 +6,7 @@ import IntroLandingPage from '../components/IntroLandingPage';
 import ServiceCatalogLandingPage from '../components/ServiceCatalogLandingPage';
 import HowItWorksLandingPage from '../components/HowItWorksLandingPage';
 import CustomerReviewLandingPage from '../components/CustomerReviewLandingPage';
+import NetworkLandingPage from '../components/NetworkLandingPage';
 
 function LandingPage() {
   return (
@@ -16,6 +17,7 @@ function LandingPage() {
       <ServiceCatalogLandingPage />
       <HowItWorksLandingPage />
       <CustomerReviewLandingPage />
+      <NetworkLandingPage />
     </div>
   );
 }
