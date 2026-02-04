@@ -1,0 +1,235 @@
+.most-booked-container {
+    max-width: 1303px;
+    margin: 0 auto;
+    padding: 40px 0px;
+}
+
+.most-booked-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4E0000;
+    margin: 0 0 30px 0;
+}
+
+.services-scroll-wrapper {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.services-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    margin-bottom: 15px;
+}
+
+.services-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Custom scrollbar outside */
+.services-scroll-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 6px;
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.services-scroll-wrapper::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 300px + (600px - 100px) * var(--scroll-progress, 0));
+    width: 100px;
+    height: 6px;
+    background: #4E0000;
+    border-radius: 10px;
+    transition: left 0.1s ease;
+    z-index: 1;
+}
+
+.service-item {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.service-image-box {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #f8e5e5 0%, #f0d5d5 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-image-box img {
+    transform: scale(1.1);
+}
+
+.service-item-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 8px 0;
+}
+
+.service-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 6px 0;
+}
+
+.service-rating {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.service-rating::before {
+    content: '★';
+    color: #ffa500;
+    margin-right: 2px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .most-booked-container {
+        padding: 30px 25px;
+    }
+
+    .most-booked-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .services-scroll-wrapper {
+        padding-bottom: 35px;
+    }
+
+    .service-item {
+        flex: 0 0 180px;
+    }
+
+    .service-image-box {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .most-booked-container {
+        padding: 25px 15px;
+        overflow-x: hidden;
+    }
+
+    .most-booked-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .services-scroll-wrapper {
+        padding-bottom: 0;
+        margin: 0 -5px;
+    }
+
+    .services-scroll-wrapper::after,
+    .services-scroll-wrapper::before {
+        display: none;
+    }
+
+    .services-scroll {
+        gap: 15px;
+        padding: 0 5px;
+    }
+
+    .service-item {
+        flex: 0 0 160px;
+    }
+
+    .service-image-box {
+        width: 160px;
+        height: 160px;
+        border-radius: 16px;
+    }
+
+    .service-item-name {
+        font-size: 15px;
+    }
+
+    .service-price {
+        font-size: 15px;
+    }
+
+    .service-rating {
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .most-booked-container {
+        padding: 20px 13px;
+        overflow-x: hidden;
+    }
+
+    .most-booked-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .services-scroll-wrapper {
+        padding-bottom: 0;
+        margin: 0 -5px;
+    }
+
+    .services-scroll {
+        gap: 12px;
+        padding: 0 5px;
+    }
+
+    .service-item {
+        flex: 0 0 140px;
+    }
+
+    .service-image-box {
+        width: 140px;
+        height: 140px;
+        border-radius: 14px;
+    }
+
+    .service-item-name {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .service-price {
+        font-size: 14px;
+    }
+
+    .service-rating {
+        font-size: 12px;
+    }
+}
