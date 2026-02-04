@@ -1,0 +1,344 @@
+.maindiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.Center{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1303px;
+    width: 100%;
+}
+
+.red-section{
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #7a2828 0%, #c94545 50%, #e67e50 100%);
+    border-radius: 28px;
+    padding: 30px 40px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.red-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.red-section p {
+    font-size: 18px;
+    margin: 0;
+    opacity: 0.95;
+    position: relative;
+    z-index: 2;
+}
+
+.greeting-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    background: #e67e50;
+    top: -80px;
+    right: -50px;
+}
+
+.circle-2 {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 160, 122, 0.5);
+    top: 20px;
+    right: 100px;
+}
+
+.circle-3 {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 192, 203, 0.6);
+    top: 60px;
+    right: 190px;
+}
+
+.silver-section{
+    width: 100%;
+    background: linear-gradient(135deg, #e9dddd, #cfc7c7);
+    border-radius: 28px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.heading{
+    margin: 0 0 25px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+}
+
+.r1{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.r1:last-child{
+    margin-bottom: 0;
+}
+
+.f1{
+    flex: 1;
+    height: 150px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #f6efea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.f1:hover{
+    transform: translateY(-5px);
+}
+
+.img1{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.ptext{
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    color: #9b1c1c;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Tablet Responsive (1024px and below) */
+@media (max-width: 1024px) {
+    .maindiv {
+        padding: 15px;
+        min-height: auto;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .Center {
+        gap: 18px;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .red-section {
+        height: 160px;
+        padding: 25px 30px;
+    }
+
+    .red-section h2 {
+        font-size: 30px;
+    }
+
+    .red-section p {
+        font-size: 16px;
+    }
+
+    .silver-section {
+        padding: 25px;
+    }
+
+    .heading {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .r1 {
+        gap: 15px;
+    }
+
+    .f1 {
+        height: 140px;
+    }
+
+    .img1 {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ptext {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Responsive (768px and below) */
+@media (max-width: 768px) {
+    .maindiv {
+        padding: 10px;
+        padding-top: 15px;
+    }
+
+    .Center {
+        gap: 15px;
+        padding: 0 5px;
+    }
+
+    .red-section {
+        height: auto;
+        min-height: 140px;
+        padding: 20px 25px;
+        border-radius: 20px;
+    }
+
+    .red-section h2 {
+        font-size: 24px;
+    }
+
+    .red-section p {
+        font-size: 14px;
+    }
+
+    .greeting-decoration {
+        width: 200px;
+    }
+
+    .circle-1 {
+        width: 150px;
+        height: 150px;
+        top: -60px;
+        right: -40px;
+    }
+
+    .circle-2 {
+        width: 90px;
+        height: 90px;
+        top: 15px;
+        right: 70px;
+    }
+
+    .circle-3 {
+        width: 50px;
+        height: 50px;
+        top: 50px;
+        right: 130px;
+    }
+
+    .silver-section {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .heading {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .r1 {
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+    }
+
+    .f1 {
+        flex: 0 0 calc(50% - 6px);
+        height: 130px;
+    }
+
+    .img1 {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 8px;
+    }
+
+    .ptext {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .maindiv {
+        padding: 8px;
+        padding-top: 12px;
+    }
+
+    .Center {
+        gap: 12px;
+    }
+
+    .red-section {
+        min-height: 120px;
+        padding: 18px 20px;
+    }
+
+    .red-section h2 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .red-section p {
+        font-size: 13px;
+    }
+
+    .silver-section {
+        padding: 15px;
+    }
+
+    .heading {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .r1 {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .f1 {
+        flex: 0 0 calc(50% - 5px);
+        height: 120px;
+    }
+
+    .img1 {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 6px;
+    }
+
+    .ptext {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
