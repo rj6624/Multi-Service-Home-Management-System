@@ -158,6 +158,49 @@
     opacity: 0.7;
 }
 
+.sidebar-auth-buttons {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar-sign-in-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.sidebar-sign-up-btn {
+    background-color: white;
+    color: #4E0000;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.sidebar-sign-in-btn:hover {
+    background-color: white;
+    color: #4E0000;
+}
+
+.sidebar-sign-up-btn:hover {
+    opacity: 0.9;
+}
+
 /* Tablet devices */
 @media (max-width: 1024px) {
     .App-header {

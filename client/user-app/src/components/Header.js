@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
 
 function Header(){
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const navigate = useNavigate();
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -10,6 +12,16 @@ function Header(){
 
     const closeSidebar = () => {
         setIsSidebarOpen(false);
+    };
+
+    const handleSignUpClick = () => {
+        navigate('/signup');
+        closeSidebar();
+    };
+
+    const handleSignInClick = () => {
+        navigate('/signup');
+        closeSidebar();
     };
 
     return (
@@ -24,8 +36,8 @@ function Header(){
                     
                     <h2 className="logo">HomeServe</h2>
                     <div className="header-buttons">
-                        <button className="sign-in-btn">Sign In</button>
-                        <button className="sign-up-btn">Sign Up</button>
+                        <button className="sign-in-btn" onClick={handleSignInClick}>Sign In</button>
+                        <button className="sign-up-btn" onClick={handleSignUpClick}>Sign Up</button>
                     </div>
                 </div>
             </header>
@@ -41,6 +53,10 @@ function Header(){
                     <li><a href="#become-provider" onClick={closeSidebar}>Become a Provider</a></li>
                     <li><a href="#contact" onClick={closeSidebar}>Contact</a></li>
                 </ul>
+                <div className="sidebar-auth-buttons">
+                    <button className="sidebar-sign-in-btn" onClick={handleSignInClick}>Sign In</button>
+                    <button className="sidebar-sign-up-btn" onClick={handleSignUpClick}>Sign Up</button>
+                </div>
             </div>
         </>
     );
