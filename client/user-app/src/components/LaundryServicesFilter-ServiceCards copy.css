@@ -1,0 +1,556 @@
+.laundry-filter-container {
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: #f5f5f5; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Header */
+.laundry-filter-header {
+    /* background-color: white; */
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    position: sticky;
+    top: 0;
+    margin-bottom: 0px;
+    /* z-index: 100; */
+    width: 100%;
+    max-width: 1303px;
+}
+
+.laundry-filter-back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4E0000;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.laundry-filter-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #4E0000;
+    flex: 1;
+}
+
+.laundry-filter-mobile-filter-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4E0000;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Content */
+.laundry-filter-content {
+    display: flex;
+    gap: 20px;
+    /* padding: 20px; */
+    max-width: 1303px;
+    width: 100%;
+    margin: 0;
+}
+
+/* Filters Sidebar */
+.laundry-filter-sidebar {
+    width: 288px;
+    flex-shrink: 0;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.laundry-filter-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.laundry-filter-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.laundry-filter-heading {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #4E0000;
+}
+
+.laundry-filter-reset-button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.laundry-filter-reset-button:hover {
+    color: #333;
+}
+
+.laundry-filter-close-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    font-weight: 300;
+}
+
+.laundry-filter-close-button:hover {
+    color: #333;
+}
+
+.laundry-filter-mobile-overlay {
+    display: none;
+}
+
+.laundry-filter-section {
+    margin-bottom: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.laundry-filter-section:last-of-type {
+    border-bottom: none;
+    padding: 12px 0 0 0;
+    margin-bottom: 0;
+}
+
+.laundry-filter-section:first-of-type {
+    padding-top: 0;
+}
+
+.laundry-filter-header-collapsible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 8px; */
+    cursor: pointer;
+    user-select: none;
+}
+
+.laundry-filter-header-collapsible h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4E0000;
+}
+
+.laundry-filter-header-collapsible span {
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+}
+
+/* Sort By Buttons */
+.laundry-filter-sort-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.laundry-filter-sort-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.laundry-filter-sort-btn:hover {
+    border-color: #4E0000;
+}
+
+.laundry-filter-sort-btn.active {
+    background-color: #4E0000;
+    border-color: #4E0000;
+    color: #ffffff;
+}
+
+.laundry-filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* Price Range */
+.laundry-filter-price-range-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.laundry-filter-price-range-slider input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #4E0000 0%, #4E0000 var(--value, 0%), #ddd var(--value, 0%), #ddd 100%);
+    outline: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+}
+
+.laundry-filter-price-range-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #4E0000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.laundry-filter-price-range-slider input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #4E0000;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
+
+.laundry-filter-price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.laundry-filter-price-inputs input[type="number"] {
+    width: 70px;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.laundry-filter-price-inputs span {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Radio Labels */
+.laundry-filter-radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.laundry-filter-radio-label input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Rating Slider */
+.laundry-filter-rating-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.laundry-filter-rating-slider input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #4E0000 0%, #4E0000 var(--value, 0%), #ddd var(--value, 0%), #ddd 100%);
+    outline: none;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.laundry-filter-rating-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #4E0000;
+    border: 2px solid #4E0000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.laundry-filter-rating-slider input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #4E0000;
+    border: 2px solid #4E0000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.laundry-filter-rating-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.laundry-filter-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.laundry-filter-star-icon {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.laundry-filter-star-icon.filled {
+    color: #FFD700;
+}
+
+.laundry-filter-rating-text {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Apply Filters Button */
+.laundry-filter-apply-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4E0000;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 20px;
+}
+
+.laundry-filter-apply-btn:hover {
+    background-color: #4e0000cc;
+}
+
+/* Services Grid */
+.laundry-filter-services-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 19px;
+    align-content: start;
+    grid-auto-rows: min-content;
+}
+
+/* Service Card */
+.laundry-filter-service-card {
+    background-color: #eae4df7c;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    min-height: 426px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.laundry-filter-service-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.laundry-filter-card-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.laundry-filter-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.laundry-filter-card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.laundry-filter-card-name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 750;
+    color: #1a1a1a;
+    line-height: 1.3;
+}
+
+.laundry-filter-card-price {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.laundry-filter-price-amount {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.laundry-filter-price-unit {
+    font-size: 14px;
+    color: #888;
+    font-weight: 400;
+}
+
+.laundry-filter-card-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 13px;
+    color: #888;
+    line-height: 1.4;
+}
+
+.laundry-filter-location-icon {
+    font-size: 16px;
+    color: #888;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.laundry-filter-card-address p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.laundry-filter-card-rating {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: #662a2a74;
+    color: #4E0000;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    width: fit-content;
+    line-height: 1;
+}
+
+.laundry-filter-book-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4E0000;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 4px;
+}
+
+.laundry-filter-book-button:hover {
+    background-color: #4e0000cc;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .laundry-filter-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .laundry-filter-mobile-filter-btn {
+        display: flex;
+    }
+
+    .laundry-filter-content {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .laundry-filter-sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .laundry-filter-sidebar.mobile-open {
+        left: 0;
+    }
+
+    .laundry-filter-mobile-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .laundry-filter-close-button {
+        display: block;
+    }
+
+    .laundry-filter-services-grid {
+        grid-template-columns: 1fr;
+    }
+}

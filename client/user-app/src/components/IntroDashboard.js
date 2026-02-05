@@ -35,40 +35,49 @@ function IntroDashboard() {
         <div className="silver-section">
           <h2 className='heading'>What are you looking for?</h2>
           <div className='r1'>
+
             <div className='f1' onClick={() => navigate('/laundry-service-list')} style={{ cursor: 'pointer' }}>
               <img src={laundryImg} alt="Laundry" className='img1' />
               <p className='ptext'>Laundry</p>
             </div>
-            <div className='f1'>
+            
+            <div className='f1' onClick={() => navigate('/cleaning-service-list')} style={{ cursor: 'pointer' }}>
               <img src={cleaningImg} alt="Cleaning" className='img1' />
               <p className='ptext'>Cleaning</p>
             </div>
-            <div className='f1'>
+            
+            <div className='f1' onClick={() => navigate('/plumbing-service-list')} style={{ cursor: 'pointer' }}>
               <img src={plumbingImg} alt="Plumbing" className='img1' />
               <p className='ptext'>Plumbing</p>
             </div>
-            <div className='f1'>
+            
+            <div className='f1' onClick={() => navigate('/electrical-service-list')} style={{ cursor: 'pointer' }}>
               <img src={electricianImg} alt="Electrical Work" className='img1'/>
               <p className='ptext'>Electrical Work</p>
             </div>
           </div>
           <div className='r1'>
-            <div className='f1'>
+
+            <div className='f1' onClick={() => navigate('/appliance-repair-service-list')} style={{ cursor: 'pointer' }}>
               <img src={applianceImg} alt="Appliance Repair" className='img1' />
               <p className='ptext'>Appliance Repair</p>
             </div>
-            <div className='f1'>
+
+            <div className='f1' onClick={() => navigate('/tailor-service-list')} style={{ cursor: 'pointer' }}>
               <img src={tailorImg} alt="Tailor" className='img1' />
               <p className='ptext'>Tailor</p>
             </div>
-            <div className='f1'>
+            
+            <div className='f1' onClick={() => navigate('/vehicle-service-list')} style={{ cursor: 'pointer' }}>
               <img src={vehicleImg} alt="Vehicle Service" className='img1' />
               <p className='ptext'>Vehicle Service</p>
             </div>
-            <div className='f1'>
+
+            <div className='f1' onClick={() => navigate('/personal-service-list')} style={{ cursor: 'pointer' }}>
               <img src={personalImg} alt="Personal Service" className='img1' />
               <p className='ptext'>Personal Service</p>
             </div>
+            
           </div>
         </div>
       </div>
