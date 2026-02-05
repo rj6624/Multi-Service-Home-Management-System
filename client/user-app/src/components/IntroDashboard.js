@@ -1,4 +1,5 @@
 import './IntroDashboard.css';
+import { useNavigate } from 'react-router-dom';
 import plumbingImg from '../assets/images/Plumbing.png';
 import electricianImg from '../assets/images/Electrician.png';
 import cleaningImg from '../assets/images/Cleaning.png';
@@ -10,6 +11,8 @@ import personalImg from '../assets/images/Personal Service.png';
 import bikeImg from '../assets/images/BikeDashboard.png';
 
 function IntroDashboard() {
+  const navigate = useNavigate();
+
   const getGreeting = () => {
     const hour = new Date().getHours();
     if (hour < 12) return 'Good Morning';
@@ -32,7 +35,7 @@ function IntroDashboard() {
         <div className="silver-section">
           <h2 className='heading'>What are you looking for?</h2>
           <div className='r1'>
-            <div className='f1'>
+            <div className='f1' onClick={() => navigate('/laundry-service-list')} style={{ cursor: 'pointer' }}>
               <img src={laundryImg} alt="Laundry" className='img1' />
               <p className='ptext'>Laundry</p>
             </div>
