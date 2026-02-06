@@ -456,7 +456,7 @@ function LaundryServicesFilterServiceCards() {
                                 <div className="laundry-filter-card-rating">
                                       ★ {service.rating} ({service.reviews})
                                   </div>
-                                  <button className="laundry-filter-book-button">Book Now</button>
+                                  <button className="laundry-filter-book-button" onClick={() => navigate('/laundry-service-list/details')}>Book Now</button>
                               </div>
                           </div>
                       ))}
