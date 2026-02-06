@@ -456,7 +456,7 @@ function TailorServicesFilterServiceCards() {
                                 <div className="tailor-filter-card-rating">
                                       ★ {service.rating} ({service.reviews})
                                   </div>
-                                  <button className="tailor-filter-book-button">Book Now</button>
+                                  <button className="tailor-filter-book-button" onClick={() => navigate('/tailor-service-list/details')}>Book Now</button>
                               </div>
                           </div>
                       ))}

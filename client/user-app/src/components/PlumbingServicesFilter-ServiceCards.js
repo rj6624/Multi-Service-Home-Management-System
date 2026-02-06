@@ -456,7 +456,7 @@ function PlumbingServicesFilterServiceCards() {
                                 <div className="plumbing-filter-card-rating">
                                       ★ {service.rating} ({service.reviews})
                                   </div>
-                                  <button className="plumbing-filter-book-button">Book Now</button>
+                                  <button className="plumbing-filter-book-button" onClick={() => navigate('/plumbing-service-list/details')}>Book Now</button>
                               </div>
                           </div>
                       ))}

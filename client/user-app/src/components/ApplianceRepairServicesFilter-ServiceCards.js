@@ -456,7 +456,7 @@ function ApplianceRepairServicesFilterServiceCards() {
                                 <div className="appliance-filter-card-rating">
                                       ★ {service.rating} ({service.reviews})
                                   </div>
-                                  <button className="appliance-filter-book-button">Book Now</button>
+                                  <button className="appliance-filter-book-button" onClick={() => navigate('/appliance-repair-service-list/details')}>Book Now</button>
                               </div>
                           </div>
                       ))}

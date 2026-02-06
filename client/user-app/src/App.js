@@ -12,6 +12,13 @@ import TailorServicesListPage from './pages/TailorServicesListPage';
 import PersonalServicesListPage from './pages/PersonalServicesListPage';
 import VehicleServicesListPage from './pages/VehicleServicesListPage';
 import LaundryServiceDetails from './pages/LaundryServiceDetails';
+import CleaningServiceDetails from './pages/CleaningServiceDetails';
+import PlumbingServiceDetails from './pages/PlumbingServiceDetails';
+import ElectricalServiceDetails from './pages/ElectricalServiceDetails';
+import ApplianceRepairServiceDetails from './pages/ApplianceRepairServiceDetails';
+import TailorServiceDetails from './pages/TailorServiceDetails';
+import PersonalServiceDetails from './pages/PersonalServiceDetails';
+import VehicleServiceDetails from './pages/VehicleServiceDetails';
 
 function App() {
   return (
@@ -30,6 +37,14 @@ function App() {
           <Route path="/personal-service-list" element={<PersonalServicesListPage />} />
           <Route path="/vehicle-service-list" element={<VehicleServicesListPage />} />
           <Route path="/laundry-service-list/details" element={<LaundryServiceDetails />} />
+          <Route path="/cleaning-service-list/details" element={<CleaningServiceDetails />} />
+          <Route path="/plumbing-service-list/details" element={<PlumbingServiceDetails />} />
+          <Route path="/electrical-service-list/details" element={<ElectricalServiceDetails />} />
+          <Route path="/appliance-repair-service-list/details" element={<ApplianceRepairServiceDetails />} />
+          <Route path="/tailor-service-list/details" element={<TailorServiceDetails />} />
+          <Route path="/personal-service-list/details" element={<PersonalServiceDetails />} />
+          <Route path="/vehicle-service-list/details" element={<VehicleServiceDetails />} />
+
         </Routes>
       </div>
     </Router>

@@ -456,7 +456,7 @@ function PersonalServicesFilterServiceCards() {
                                 <div className="personal-filter-card-rating">
                                       ★ {service.rating} ({service.reviews})
                                   </div>
-                                  <button className="personal-filter-book-button">Book Now</button>
+                                  <button className="personal-filter-book-button" onClick={() => navigate('/personal-service-list/details')}>Book Now</button>
                               </div>
                           </div>
                       ))}

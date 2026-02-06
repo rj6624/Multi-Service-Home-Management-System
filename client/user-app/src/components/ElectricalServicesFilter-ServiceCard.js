@@ -456,7 +456,7 @@ function ElectricalServicesFilterServiceCard() {
                                 <div className="electrical-filter-card-rating">
                                       ★ {service.rating} ({service.reviews})
                                   </div>
-                                  <button className="electrical-filter-book-button">Book Now</button>
+                                  <button className="electrical-filter-book-button" onClick={() => navigate('/electrical-service-list/details')}>Book Now</button>
                               </div>
                           </div>
                       ))}
