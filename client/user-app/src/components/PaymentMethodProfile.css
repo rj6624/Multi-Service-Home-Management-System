@@ -1,0 +1,141 @@
+.payment-method-container {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 760px;
+}
+
+.payment-method-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.payment-header-icon {
+    font-size: 24px;
+    color: #4E0000;
+}
+
+.payment-method-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4E0000;
+}
+
+.payment-methods-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-method-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 12px;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #fafafa;
+}
+
+.payment-method-card:hover {
+    border-color: #d0d0d0;
+    background: #f5f5f5;
+}
+
+.payment-method-card.selected {
+    border-color: #4E0000;
+    background: white;
+}
+
+.payment-method-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.payment-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.google-pay-icon {
+    background: #E8F4FD;
+    color: #1976D2;
+}
+
+.cash-icon {
+    background: #E8F5E9;
+    color: #43A047;
+}
+
+.payment-method-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.payment-radio {
+    display: flex;
+    align-items: center;
+}
+
+.radio-button {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #d0d0d0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.radio-button.selected {
+    border-color: #4E0000;
+    background: white;
+}
+
+.radio-inner {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4E0000;
+}
+
+@media (max-width: 768px) {
+    .payment-method-container {
+        margin: 20px 15px;
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .payment-method-title {
+        font-size: 18px;
+    }
+
+    .payment-method-card {
+        padding: 15px 18px;
+    }
+
+    .payment-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .payment-method-name {
+        font-size: 15px;
+    }
+}

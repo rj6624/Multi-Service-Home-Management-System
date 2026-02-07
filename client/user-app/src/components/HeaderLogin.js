@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { FaBell, FaShoppingCart, FaUser, FaCog, FaClipboardList, FaHome, FaWallet, FaSearch, FaMicrophone } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './HeaderLogin.css';
 
 function HeaderLogin() {
     const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
 
     const toggleProfileMenu = () => {
         setIsProfileMenuOpen(!isProfileMenuOpen);
@@ -17,8 +18,17 @@ function HeaderLogin() {
 
     const handleMenuClick = (action) => {
         closeProfileMenu();
-        // Add navigation logic here
-        console.log('Navigate to:', action);
+        
+        // Navigation logic
+        if (action === 'profile') {
+            navigate('/profile');
+        } else if (action === 'cart') {
+            navigate('/cart');
+        } else if (action === 'orders') {
+            navigate('/orders');
+        } else if (action === 'settings') {
+            navigate('/settings');
+        }
     };
 
     return (
@@ -100,23 +110,38 @@ function HeaderLogin() {
 
             {/* Mobile Footer Navigation */}
             <nav className="mobile-footer">
-                <button className="footer-nav-btn" onClick={() => navigate('/dashboard')}>
+                <button 
+                    className={`footer-nav-btn ${location.pathname === '/dashboard' ? 'active' : ''}`}
+                    onClick={() => navigate('/dashboard')}
+                >
                     <FaHome />
                     <span>Home</span>
                 </button>
-                <button className="footer-nav-btn">
+                <button 
+                    className={`footer-nav-btn ${location.pathname === '/cart' ? 'active' : ''}`}
+                    onClick={() => navigate('/cart')}
+                >
                     <FaShoppingCart />
                     <span>Cart</span>
                 </button>
-                <button className="footer-nav-btn">
+                <button 
+                    className={`footer-nav-btn ${location.pathname === '/orders' ? 'active' : ''}`}
+                    onClick={() => navigate('/orders')}
+                >
                     <FaClipboardList />
                     <span>Orders</span>
                 </button>
-                <button className="footer-nav-btn">
+                <button 
+                    className={`footer-nav-btn ${location.pathname === '/settings' ? 'active' : ''}`}
+                    onClick={() => navigate('/settings')}
+                >
                     <FaCog />
                     <span>Settings</span>
                 </button>
-                <button className="footer-nav-btn">
+                <button 
+                    className={`footer-nav-btn ${location.pathname === '/profile' ? 'active' : ''}`}
+                    onClick={() => navigate('/profile')}
+                >
                     <FaUser />
                     <span>Profile</span>
                 </button>

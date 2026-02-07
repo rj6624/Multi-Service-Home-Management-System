@@ -1,0 +1,240 @@
+.saved-address-container {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 760px;
+}
+
+.saved-address-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.address-header-icon {
+    font-size: 24px;
+    color: #4E0000;
+}
+
+.saved-address-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4E0000;
+}
+
+.add-address-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #4E0000;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.add-address-btn:hover {
+    background: #4e0000cc;
+}
+
+.address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.address-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 18px;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    transition: all 0.2s;
+    background: #fafafa;
+}
+
+.address-card:hover {
+    border-color: #d0d0d0;
+    background: #f5f5f5;
+}
+
+.address-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.address-info.editing {
+    gap: 10px;
+}
+
+.address-label {
+    margin: 0 0 4px 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #4E0000;
+}
+
+.address-text {
+    margin: 0;
+    font-size: 14px;
+    color: #666666c0;
+    line-height: 1.5;
+}
+
+.address-actions {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-left: 15px;
+    padding-top: 4px;
+}
+
+.action-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.edit-btn {
+    background: #f5f5f5;
+    color: #666;
+}
+
+.edit-btn:hover {
+    background: #e8e8e8;
+    color: #333;
+}
+
+.delete-btn {
+    background: #FFEBEE;
+    color: #E53935;
+}
+
+.delete-btn:hover {
+    background: #FFCDD2;
+    color: #C62828;
+}
+
+.save-btn {
+    background: #4E0000;
+    color: white;
+    border-radius: 50%;
+}
+
+.save-btn:hover {
+    background: #4e0000cc;
+}
+
+.cancel-btn {
+    background: #f5f5f5;
+    color: #666;
+    border-radius: 50%;
+}
+
+.cancel-btn:hover {
+    background: #e8e8e8;
+    color: #333;
+}
+
+.address-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+    transition: all 0.2s;
+    background: white;
+}
+
+.address-input:focus {
+    outline: none;
+    border-color: #4E0000;
+}
+
+.address-input::placeholder {
+    color: #999;
+}
+
+.address-card.adding {
+    border-color: #4E0000;
+    background: white;
+}
+
+@media (max-width: 768px) {
+    .saved-address-container {
+        margin: 20px 15px;
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .saved-address-title {
+        font-size: 18px;
+    }
+
+    .address-card {
+        padding: 14px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .address-info {
+        flex: 1;
+        max-width: calc(100% - 90px);
+        padding-right: 10px;
+    }
+
+    .address-actions {
+        margin-left: 8px;
+        margin-top: 0;
+        padding-top: 4px;
+        border-top: none;
+        flex-shrink: 0;
+    }
+
+    .action-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .address-label {
+        font-size: 15px;
+    }
+
+    .address-text {
+        font-size: 13px;
+        word-break: break-word;
+    }
+
+    .action-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,301 @@
+.personal-info-container {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 70px auto 20px auto;
+    max-width: 760px;
+    overflow: hidden;
+}
+
+.personal-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.personal-info-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4E0000;
+}
+
+.edit-info-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #4E0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.edit-info-btn:hover {
+    background: #3a0000;
+}
+
+.edit-info-btn svg {
+    font-size: 14px;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.save-info-btn,
+.cancel-info-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.save-info-btn {
+    background: #4E0000;
+    color: white;
+}
+
+.save-info-btn:hover {
+    background: #3a0000;
+}
+
+.cancel-info-btn {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.cancel-info-btn:hover {
+    background: #e0e0e0;
+}
+
+.save-info-btn svg,
+.cancel-info-btn svg {
+    font-size: 14px;
+}
+
+.info-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: all 0.2s;
+}
+
+.info-input:focus {
+    outline: none;
+    border-color: #4E0000;
+}
+
+.info-input option {
+    font-weight: 600;
+}
+
+.info-input[type="date"] {
+    position: relative;
+    cursor: pointer;
+}
+
+.info-input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+}
+
+select.info-input {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%231a1a1a' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    padding-right: 36px;
+}
+
+.personal-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.info-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-field-full {
+    grid-column: 1 / -1;
+}
+
+.info-label {
+    font-size: 14px;
+    color: #888;
+    font-weight: 400;
+    margin: 0;
+}
+
+.info-value {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    .personal-info-container {
+        padding: 20px 15px;
+        margin: 60px 15px 20px 15px;
+        border-radius: 12px;
+    }
+
+    .personal-info-header {
+        margin-bottom: 20px;
+    }
+
+    .personal-info-title {
+        font-size: 16px;
+        flex: 1;
+    }
+
+    .edit-info-btn,
+    .save-info-btn,
+    .cancel-info-btn {
+        padding: 10px;
+        gap: 0;
+        min-width: 40px;
+        justify-content: center;
+    }
+
+    .edit-info-btn span,
+    .save-info-btn span,
+    .cancel-info-btn span {
+        display: none;
+    }
+
+    .edit-info-btn svg,
+    .save-info-btn svg,
+    .cancel-info-btn svg {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .edit-actions {
+        gap: 8px;
+    }
+
+    .personal-info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .info-field-full {
+        grid-column: 1;
+    }
+
+    .info-label {
+        font-size: 13px;
+    }
+
+    .info-value {
+        font-size: 15px;
+    }
+
+    .info-input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .info-input[type="date"] {
+        max-width: 100%;
+    }
+
+    .info-input[type="date"]::-webkit-calendar-picker-indicator {
+        font-size: 16px;
+    }
+
+    .info-input[type="date"]::-webkit-datetime-edit {
+        font-size: 14px;
+    }
+
+    select.info-input {
+        font-size: 14px;
+        background-size: 10px;
+        background-position: right 10px center;
+        padding-right: 32px;
+        max-height: 45px;
+    }
+
+    .info-input option {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .personal-info-container {
+        padding: 15px;
+    }
+
+    .personal-info-title {
+        font-size: 16px;
+    }
+
+    .info-label {
+        font-size: 12px;
+    }
+
+    .info-value {
+        font-size: 14px;
+    }
+
+    .info-input {
+        font-size: 13px;
+        padding: 9px;
+    }
+
+    .info-input[type="date"] {
+        max-width: 100%;
+    }
+
+    .info-input[type="date"]::-webkit-calendar-picker-indicator {
+        font-size: 14px;
+    }
+
+    .info-input[type="date"]::-webkit-datetime-edit {
+        font-size: 13px;
+    }
+
+    select.info-input {
+        font-size: 13px;
+        background-size: 9px;
+        background-position: right 8px center;
+        padding-right: 28px;
+        max-height: 42px;
+    }
+
+    .info-input option {
+        font-size: 13px;
+        padding: 8px 6px;
+    }
+
+    .info-field {
+        max-width: 100%;
+        overflow: hidden;    }
+}

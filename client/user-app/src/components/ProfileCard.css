@@ -1,0 +1,271 @@
+.profile-card-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 20px;
+}
+
+.profile-back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 8px 0;
+    font-weight: 500;
+}
+
+.profile-back-btn:hover {
+    color: #4E0000;
+}
+
+.profile-back-btn svg {
+    font-size: 20px;
+}
+
+.profile-card {
+    background: linear-gradient(135deg, #4E0000 0%, #6B0000 100%);
+    border-radius: 20px;
+    padding: 30px;
+    padding-bottom: 30px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+
+.profile-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-card-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+}
+
+.profile-settings-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.profile-settings-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.profile-settings-btn svg {
+    font-size: 24px;
+    color: white;
+}
+
+.profile-user-info {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 45px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #C5A572 0%, #D4B583 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #3E2723;
+    flex-shrink: 0;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-name {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.profile-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+}
+
+.profile-contact:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    position: absolute;
+    bottom: -40px;
+    left: 50px;
+    right: 50px;
+    z-index: 10;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+    font-size: 28px;
+    color: #4E0000;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .profile-card-container {
+        padding: 15px;
+    }
+
+    .profile-back-btn {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .profile-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .profile-card-title {
+        font-size: 22px;
+    }
+
+    .profile-settings-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile-settings-btn svg {
+        font-size: 20px;
+    }
+
+    .profile-user-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .profile-avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+    }
+
+    .profile-name {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .profile-contact {
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .profile-stats {
+        gap: 10px;
+        left: 35px;
+        right: 35px;
+        bottom: -25px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-icon {
+        font-size: 24px;
+    }
+
+    .stat-value {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 15px;
+    }
+
+    .profile-card-header {
+        margin-bottom: 20px;
+    }
+
+    .profile-card-title {
+        font-size: 20px;
+    }
+
+    .profile-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .profile-name {
+        font-size: 18px;
+    }
+
+    .profile-contact {
+        font-size: 13px;
+    }
+
+    .stat-card {
+        padding: 12px;
+    }
+
+    .stat-icon {
+        font-size: 20px;
+    }
+
+    .stat-value {
+        font-size: 14px;
+    }
+}

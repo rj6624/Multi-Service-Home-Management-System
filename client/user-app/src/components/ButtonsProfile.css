@@ -1,0 +1,88 @@
+.buttons-profile {
+    max-width: 760px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.button-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.profile-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: white;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.profile-action-btn:hover {
+    border-color: #d0d0d0;
+    background: #fafafa;
+}
+
+.btn-icon {
+    font-size: 20px;
+    color: #1a1a1a;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: white;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #E53935;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.logout-btn:hover {
+    border-color: #FFCDD2;
+    background: #FFEBEE;
+}
+
+.logout-icon {
+    font-size: 20px;
+    color: #E53935;
+}
+
+@media (max-width: 768px) {
+    .buttons-profile {
+        margin: 20px 15px;
+    }
+
+    .button-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .profile-action-btn,
+    .logout-btn {
+        padding: 16px 18px;
+        font-size: 15px;
+    }
+
+    .btn-icon,
+    .logout-icon {
+        font-size: 18px;
+    }
+}

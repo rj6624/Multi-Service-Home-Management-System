@@ -19,6 +19,7 @@ import ApplianceRepairServiceDetails from './pages/ApplianceRepairServiceDetails
 import TailorServiceDetails from './pages/TailorServiceDetails';
 import PersonalServiceDetails from './pages/PersonalServiceDetails';
 import VehicleServiceDetails from './pages/VehicleServiceDetails';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
           <Route path="/tailor-service-list/details" element={<TailorServiceDetails />} />
           <Route path="/personal-service-list/details" element={<PersonalServiceDetails />} />
           <Route path="/vehicle-service-list/details" element={<VehicleServiceDetails />} />
+
+          <Route path="/profile" element={<Profile />} />
 
         </Routes>
       </div>
