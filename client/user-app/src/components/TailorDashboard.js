@@ -38,7 +38,7 @@ function TailorDashboard() {
               </div>
               <h4 className="service-item-name">{service.name}</h4>
               <p className="service-price">₹{service.price}.00</p>
-              <p className="service-rating">★{service.rating} ({service.reviews})</p>
+              <p className="service-rating">★ {service.rating} ({service.reviews})</p>
             </div>
           ))}
         </div>

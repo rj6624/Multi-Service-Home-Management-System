@@ -21,6 +21,7 @@ import PersonalServiceDetails from './pages/PersonalServiceDetails';
 import VehicleServiceDetails from './pages/VehicleServiceDetails';
 import Profile from './pages/Profile';
 import Setting from './pages/Setting';
+import Cart from './pages/Cart';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
 
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Setting />} />
+          <Route path="/cart" element={<Cart />} />
 
         </Routes>
       </div>
