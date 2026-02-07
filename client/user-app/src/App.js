@@ -20,6 +20,7 @@ import TailorServiceDetails from './pages/TailorServiceDetails';
 import PersonalServiceDetails from './pages/PersonalServiceDetails';
 import VehicleServiceDetails from './pages/VehicleServiceDetails';
 import Profile from './pages/Profile';
+import Setting from './pages/Setting';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="/vehicle-service-list/details" element={<VehicleServiceDetails />} />
 
           <Route path="/profile" element={<Profile />} />
+          <Route path="/settings" element={<Setting />} />
 
         </Routes>
       </div>
